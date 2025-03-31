@@ -30,10 +30,8 @@ hospital-management/
 - **`index.html`** - Home page with navigation links.  
 - **`doctors.html`** - Page to manage doctors.  
 - **`patients.html`** - Page to manage patients.  
-- **`appointments.html`** - Page to book and view appointments.  
-- **`styles.css`** - Stylesheet for design and layout.  
-- **`script.js`** - JavaScript for dynamic data handling.
-
+- **`appointments.html`** - Page to book and view appointments.
+  
 ## 🔥 Future Enhancements
 - 🖥 **Backend Integration with Java & Database**  
 - 📊 **Admin Dashboard for Better Management**  
