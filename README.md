@@ -10,8 +10,6 @@ hospital-management/
 │── doctors.html       (Doctor Management)
 │── patients.html      (Patient Management)
 │── appointments.html  (Appointment Management)
-│── styles.css         (Common CSS)
-│── script.js          (Common JavaScript)
 │── README.md          (Project Documentation)
 ```
 
@@ -46,5 +44,5 @@ hospital-management/
 Feel free to **fork this repository**, raise **issues**, or **suggest improvements**! 🎉  
 
 ## 📧 Contact
-For any queries or collaboration, reach out at **your-email@example.com**. 🚀
+For any queries or collaboration, reach out at **sachinkumargupta072@gmail.com**. 🚀
 
