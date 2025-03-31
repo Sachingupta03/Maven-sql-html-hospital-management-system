@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Patient List</h2>
+<table id="patientTable">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Disease</th>
+    </tr>
+</table>
+
+<h3>Add New Patient</h3>
+<form id="patientForm">
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id" required><br>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age" required><br>
+
+    <label for="disease">Disease:</label>
+    <input type="text" id="disease" name="disease" required><br>
+
+    <button type="submit">Add Patient</button>
+</form>
+
+<script>
+    document.getElementById("patientForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("age").value;
+        let disease = document.getElementById("disease").value;
+
+        let table = document.getElementById("patientTable");
+        let row = table.insertRow(-1);
+
+        row.insertCell(0).innerText = id;
+        row.insertCell(1).innerText = name;
+        row.insertCell(2).innerText = age;
+        row.insertCell(3).innerText = disease;
+
+        document.getElementById("patientForm").reset();
+    });
+</script>
+
+</body>
+</html>

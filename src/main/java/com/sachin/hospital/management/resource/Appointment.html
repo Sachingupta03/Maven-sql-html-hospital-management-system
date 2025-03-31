@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Appointment List</h2>
+<table id="appointmentTable">
+    <tr>
+        <th>ID</th>
+        <th>Patient ID</th>
+        <th>Doctor ID</th>
+        <th>Date</th>
+    </tr>
+</table>
+
+<h3>Book New Appointment</h3>
+<form id="appointmentForm">
+    <label for="id">Appointment ID:</label>
+    <input type="text" id="id" name="id" required><br>
+
+    <label for="patientId">Patient ID:</label>
+    <input type="text" id="patientId" name="patientId" required><br>
+
+    <label for="doctorId">Doctor ID:</label>
+    <input type="text" id="doctorId" name="doctorId" required><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br>
+
+    <button type="submit">Book Appointment</button>
+</form>
+
+<script>
+    document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let id = document.getElementById("id").value;
+        let patientId = document.getElementById("patientId").value;
+        let doctorId = document.getElementById("doctorId").value;
+        let date = document.getElementById("date").value;
+
+        let table = document.getElementById("appointmentTable");
+        let row = table.insertRow(-1);
+
+        row.insertCell(0).innerText = id;
+        row.insertCell(1).innerText = patientId;
+        row.insertCell(2).innerText = doctorId;
+        row.insertCell(3).innerText = date;
+
+        document.getElementById("appointmentForm").reset();
+    });
+</script>
+
+</body>
+</html>
